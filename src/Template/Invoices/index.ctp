@@ -12,7 +12,6 @@
                 <th><?= $this->Paginator->sort('services') ?></th>
                 <th><?= $this->Paginator->sort('due') ?></th>
                 <th><?= $this->Paginator->sort('created') ?></th>
-                <th><?= $this->Paginator->sort('modified') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -25,7 +24,6 @@
                 <td><?= h($invoice->services) ?></td>
                 <td><?= h($invoice->due) ?></td>
                 <td><?= h($invoice->created) ?></td>
-                <td><?= h($invoice->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $invoice->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $invoice->id]) ?>

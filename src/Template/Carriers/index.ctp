@@ -9,8 +9,6 @@
                 <th><?= $this->Paginator->sort('id') ?></th>
                 <th><?= $this->Paginator->sort('name') ?></th>
                 <th><?= $this->Paginator->sort('code') ?></th>
-                <th><?= $this->Paginator->sort('created') ?></th>
-                <th><?= $this->Paginator->sort('modified') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -20,8 +18,6 @@
                 <td><?= $this->Number->format($carrier->id) ?></td>
                 <td><?= h($carrier->name) ?></td>
                 <td><?= h($carrier->code) ?></td>
-                <td><?= h($carrier->created) ?></td>
-                <td><?= h($carrier->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $carrier->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $carrier->id]) ?>
