@@ -1,13 +1,5 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Carrier'), ['action' => 'edit', $carrier->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Carrier'), ['action' => 'delete', $carrier->id], ['confirm' => __('Are you sure you want to delete # {0}?', $carrier->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Carriers'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Carrier'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Patients'), ['controller' => 'Patients', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Patient'), ['controller' => 'Patients', 'action' => 'add']) ?> </li>
-    </ul>
+     <?= $this->Element('actions', array('type' => 'Carrier', 'typePlural' => 'Carriers')); ?>
 </nav>
 <div class="carriers view large-9 medium-8 columns content">
     <h3><?= h($carrier->name) ?></h3>

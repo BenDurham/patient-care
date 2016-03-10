@@ -1,12 +1,5 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Appointments'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Patients'), ['controller' => 'Patients', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Patient'), ['controller' => 'Patients', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Doctors'), ['controller' => 'Doctors', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Doctor'), ['controller' => 'Doctors', 'action' => 'add']) ?></li>
-    </ul>
+    <?= $this->Element('actions', array('type' => 'Appointment', 'typePlural' => 'Appointments')); ?>
 </nav>
 <div class="appointments form large-9 medium-8 columns content">
     <?= $this->Form->create($appointment) ?>

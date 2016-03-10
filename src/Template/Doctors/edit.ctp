@@ -1,16 +1,5 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $doctor->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $doctor->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Doctors'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Appointments'), ['controller' => 'Appointments', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Appointment'), ['controller' => 'Appointments', 'action' => 'add']) ?></li>
-    </ul>
+     <?= $this->Element('actions', array('type' => 'Doctor', 'typePlural' => 'Doctors')); ?>
 </nav>
 <div class="doctors form large-9 medium-8 columns content">
     <?= $this->Form->create($doctor) ?>

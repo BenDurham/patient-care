@@ -1,10 +1,5 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Invoice'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Patients'), ['controller' => 'Patients', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Patient'), ['controller' => 'Patients', 'action' => 'add']) ?></li>
-    </ul>
+     <?= $this->Element('actions', array('type' => 'Invoice', 'typePlural' => 'Invoices')); ?>
 </nav>
 <div class="invoices index large-9 medium-8 columns content">
     <h3><?= __('Invoices') ?></h3>
